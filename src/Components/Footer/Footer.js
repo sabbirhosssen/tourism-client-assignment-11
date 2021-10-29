@@ -5,13 +5,9 @@ const Footer = () => {
     return (
         <div>
 
-            <br /><br /><br />
-
-
-
             <div className="m-0 mb-0 bg-black text-white">
                 <div className="container">
-                    <div className="row pt-3 py-2 text-start">
+                    <div className="row  text-start">
                         {/* colam 1  */}
                         <div className="col-md-4 col-sm-6 ">
                             <img src="https://tour.com.bd/uploads/global/logo.png" alt="" width="150px" />
@@ -23,7 +19,7 @@ const Footer = () => {
                             <h6>info@tourism.com</h6>
                         </div>
                         {/* colam 3  */}
-                        <div className="col-md-4 col-sm-6 text-start ps-5">
+                        <div className="col-md-4 col-sm-6">
                             <h3 className="text-blue py-2">Services</h3>
                             <ul className="list-unstyled ">
                                 <li className="py-3">About us </li>

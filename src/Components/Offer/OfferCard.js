@@ -7,7 +7,7 @@ const OfferCard = ({ offer }) => {
     return (
 
 
-        <Col >
+        <Col  >
             <Card style={{ height: "385px" }} >
                 <Card.Img variant="top" src={img} height="180px" />
                 <Card.Body className="text-start">
@@ -16,7 +16,7 @@ const OfferCard = ({ offer }) => {
                         {body}
                     </Card.Text>
                     <Card.Title>
-                        <Link >
+                        <Link as={Link} to={'./login'}>
                             <Button className="text-center bg-info"> READ MORE</Button>
                         </Link>
                     </Card.Title>

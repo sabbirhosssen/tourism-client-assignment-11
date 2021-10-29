@@ -3,11 +3,8 @@ import { Card, Col, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const TourCard = ({ tour }) => {
-    const { img, title, body } = tour
+    const { img, title, body } = tour;
     return (
-
-
-
         <Col >
 
             <Card>
@@ -19,20 +16,20 @@ const TourCard = ({ tour }) => {
                         <Card.Body>
                             <Card.Title>{title}</Card.Title>
                             <Card.Text>
-                                <div> <i className="fas fa-map-marker-alt"></i> {body}</div>
-                                <div className="text-danger">
+                                <Card.Text> <i className="fas fa-map-marker-alt"></i> {body}</Card.Text>
+                                <Card.Text className="text-danger">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                    <i class="far fa-star"></i>
+                                    <i className="fas fa-star-half-alt"></i>
+                                    <i className="far fa-star"></i>
 
-                                </div>
+                                </Card.Text>
 
 
                             </Card.Text>
                             <Card.Title>
-                                <Link >
+                                <Link as={Link} to={"/login"}>
                                     <Button className="text-center bg-primary"> Book Now</Button>
                                 </Link>
                             </Card.Title>
@@ -45,8 +42,6 @@ const TourCard = ({ tour }) => {
 
             </Card>
         </Col>
-
-
 
     );
 };

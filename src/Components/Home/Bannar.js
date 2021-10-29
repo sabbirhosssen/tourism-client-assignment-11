@@ -1,14 +1,15 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Image } from 'react-bootstrap';
 
 const Bannar = () => {
     return (
         <Carousel variant="dark">
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block "
                     src="https://tour.com.bd/uploads/images/slider/f4n79teyk0g8kg8.jpg"
                     alt="First slide"
+                    fluid
                 />
                 <Carousel.Caption className=" text-white">
                     <h5>BOOK THE PERFECT TRIP</h5>
@@ -16,10 +17,11 @@ const Bannar = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block "
                     src="https://tour.com.bd/uploads/images/slider/e41yislk0084kkg.jpg"
                     alt="Second slide"
+                    fluid
                 />
                 <Carousel.Caption className=" text-white">
                     <h5>Vacation Packages</h5>
@@ -27,10 +29,12 @@ const Bannar = () => {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
+                <Image
+                    className="d-block  "
                     src="https://tour.com.bd/uploads/images/slider/76ejktjn6y88ckk.jpg"
                     alt="Third slide"
+                    fluid
+
                 />
                 <Carousel.Caption className=" text-white">
                     <h5>Travel to the World</h5>

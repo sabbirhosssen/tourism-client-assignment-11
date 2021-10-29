@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "img": "https://tour.com.bd/uploads/images/hotels/slider/637176_3.jpg",
+        "title": "Rendezvous Hotels",
+        "price": "15000",
+        "address": "Singapore"
+    },
+    {
+        "id": "2",
+        "img": "https://tour.com.bd/uploads/images/hotels/slider/thumbs/588989_2.jpg",
+        "title": "Swissotel Le Plaza Basel",
+        "price": "14000",
+        "address": "Messe Basel"
+    },
+    {
+        "id": "3",
+        "img": "https://tour.com.bd/uploads/images/hotels/slider/thumbs/637176_3.jpg",
+        "title": "Hyatt Regency Perth",
+        "price": "19999",
+        "address": "Dubai"
+    },
+    {
+        "id": "4",
+        "img": "https://tour.com.bd/uploads/images/hotels/slider/thumbs/94178_4.jpg",
+        "title": "Islamabad Marriott Hotel",
+        "price": "17099",
+        "address": "Islamabad"
+    },
+    {
+        "id": "5",
+        "img": "https://tour.com.bd/uploads/images/hotels/slider/thumbs/731415_8.jpg",
+        "title": "jumeirah Beach Hotel",
+        "price": "25000",
+        "address": "Dubai"
+    },
+    {
+        "id": "6",
+        "img": "https://tour.com.bd/uploads/images/hotels/slider/thumbs/100617_6.jpg",
+        "title": "Malmaison Manchester",
+        "price": "9999",
+        "address": "Manchester"
+    }
+]

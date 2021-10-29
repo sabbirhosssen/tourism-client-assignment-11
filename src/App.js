@@ -8,6 +8,8 @@ import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Login/Login';
 import OfferBody from './Components/Offer/OfferBody';
 import Tour from './Components/Tour/Tour';
+import HotelBody from './Components/Hotel/HotelBody/HotelBody';
+import Signup from './Components/Signup/Signup';
 
 function App() {
   return (
@@ -21,14 +23,21 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          <Route path="/tour">
+            <Tour></Tour>
+          </Route>
+          <Route path="/hotel">
+            <HotelBody></HotelBody>
+          </Route>
           <Route path="/offer">
             <OfferBody></OfferBody>
           </Route>
+
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/tour">
-            <Tour></Tour>
+          <Route path="/signup">
+            <Signup></Signup>
           </Route>
 
           <Route exact path="*">

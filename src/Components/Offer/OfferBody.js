@@ -10,14 +10,14 @@ const OfferBody = () => {
         fetch('./Offers.json')
             .then(res => res.json())
             .then(data => setOffer(data))
-    });
+    }, []);
 
     return (
         <div>
-            <div className="text-center pt-3 m-5">
+            <div className="text-center text-danger pt-2 p-5">
                 <h1>Our Offer</h1>
             </div>
-            <Row xs={1} md={3} className="g-4 p-5 shadow bg-body rounded mb-5">
+            <Row xs={1} md={3} className="g-4 p-4 shadow bg-body rounded mb-5">
                 {
                     offer.map(offer =>
                         <OfferCard
@@ -34,3 +34,4 @@ const OfferBody = () => {
 };
 
 export default OfferBody;
+
