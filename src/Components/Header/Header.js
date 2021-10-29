@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import { Container, Image, Nav, Navbar, Offcanvas } from 'react-bootstrap';
+import { Container, Image, Nav, Navbar, Button, Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+// import useAuth from '../../Hooks/useAuth';
 import Icon from './Icon';
 
 
 
 const Header = () => {
+    // const { user, logOut } = useAuth();
 
     //contact click
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    // console.log(user);
 
     return (
 
@@ -29,15 +32,17 @@ const Header = () => {
                             <Nav.Link as={Link} to={"/hotel"} className="px-3 fs-5 text-black" >
                                 <i className="fas fa-hotel"></i> HOTELS</Nav.Link>
                             <Nav.Link as={Link} to={"/offer"} className="px-3 fs-5 text-black" >OFFERS</Nav.Link>
-                            <Nav.Link className=" fs-5 text-black " >
+                            <Nav className=" fs-5 text-black " >
                                 <button className="border-0 bg-transparent" onClick={handleShow} > CONTACT</button>
-                            </Nav.Link>
+                            </Nav>
                         </Nav>
 
-                        <Nav>
-                            <Nav.Link href="#deets" className="text-dark">Log out</Nav.Link>
-                            <Icon></Icon>
-                        </Nav>
+                        <Button variant="light" >Logout</Button> :
+                        <Icon></Icon>
+
+
+
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

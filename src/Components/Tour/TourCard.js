@@ -1,9 +1,17 @@
 import React from 'react';
 import { Card, Col, Row, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const TourCard = ({ tour }) => {
-    const { img, title, body } = tour;
+    const { key, img, title, body } = tour;
+    const history = useHistory();
+
+    // Book show handle
+    const handleTourBook = (key) => {
+        const uri = `/tourBook/${key}`
+        history.push(uri)
+    }
     return (
         <Col >
 
@@ -29,9 +37,10 @@ const TourCard = ({ tour }) => {
 
                             </Card.Text>
                             <Card.Title>
-                                <Link as={Link} to={"/login"}>
-                                    <Button className="text-center bg-primary"> Book Now</Button>
-                                </Link>
+
+                                <Button className="text-center bg-primary"
+                                    onClick={() => handleTourBook(key)}> Book Now</Button>
+
                             </Card.Title>
                         </Card.Body>
                     </Col>

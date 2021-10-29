@@ -10,6 +10,8 @@ import OfferBody from './Components/Offer/OfferBody';
 import Tour from './Components/Tour/Tour';
 import HotelBody from './Components/Hotel/HotelBody/HotelBody';
 import Signup from './Components/Signup/Signup';
+import TourBook from './Components/Page/TourBook/TourBook';
+// import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -38,6 +40,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <Signup></Signup>
+          </Route>
+          <Route path="/tourBook/:id">
+            <TourBook></TourBook>
           </Route>
 
           <Route exact path="*">

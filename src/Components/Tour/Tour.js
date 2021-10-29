@@ -25,7 +25,7 @@ const Tour = () => {
                 {
                     tour.map(tour =>
                         <TourCard
-                            key={tour.id}
+                            key={tour.key}
                             tour={tour}
                         >
 

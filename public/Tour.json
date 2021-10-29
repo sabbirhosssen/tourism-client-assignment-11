@@ -1,48 +1,48 @@
 [
     {
-        "id": "1",
+        "key": "0",
         "img": "https://tour.com.bd/uploads/images/tours/slider/370472_M.V-Aboshar-2.jpg",
         "title": "SUNDARBAN TOUR KHULNA-Dhaka",
         "body": "Dhaka"
     },
     {
-        "id": "2",
+        "key": "1",
         "img": "https://tour.com.bd/uploads/images/tours/slider/8.jpg",
         "title": "SPECTACULARS OF THE NILE...",
         "body": "Alexandria"
     },
     {
-        "id": "3",
+        "key": "2",
         "img": "https://tour.com.bd/uploads/images/offers/976745_save.jpg",
         "title": "6 DAYS AROUND THAILAND",
         "body": "bangkok"
     },
     {
-        "id": "4",
+        "key": "3",
         "img": "https://tour.com.bd/uploads/images/tours/slider/thumbs/hongkong.jpg",
         "title": "HONG KONG ISLAND TOUR",
         "body": "Hong kong"
     },
     {
-        "id": "5",
+        "key": "4",
         "img": "https://tour.com.bd/uploads/images/tours/slider/thumbs/malaysia.jpg",
         "title": "LEGOLAND MALAYSIA DAY PASS",
         "body": "Legoland"
     },
     {
-        "id": "6",
+        "key": "5",
         "img": "https://tour.com.bd/uploads/images/tours/slider/thumbs/hurghada.jpg",
         "title": "HURGHADA SUNSET DESERT SAFARI",
         "body": "Hurghada"
     },
     {
-        "id": "7",
+        "key": "6",
         "img": "https://tour.com.bd/uploads/images/tours/slider/thumbs/sydney.jpg",
         "title": "SYDNEY AND BONDI BEACH EXPLORER",
         "body": "Tamarama "
     },
     {
-        "id": "8",
+        "key": "7",
         "img": "https://tour.com.bd/uploads/images/tours/slider/thumbs/211701_delhi.jpg",
         "title": "OLD AND NEW DELHI CITY TOUR",
         "body": "Kirti Nagar"
