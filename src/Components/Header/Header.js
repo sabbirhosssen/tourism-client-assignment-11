@@ -56,8 +56,24 @@ const Header = () => {
                     <Offcanvas.Title className="fs-2">Contact </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the elements you
-                    have chosen. Like, text, images, lists, etc.
+                    <Offcanvas.Title><h3>Contact Admissions Tour</h3></Offcanvas.Title>
+                    <Image src="https://tour.com.bd/uploads/global/logo.png" rounded="true" width="150px" className="justify-content-end"></Image>
+                    <Offcanvas.Body>
+                        <h3>Tour Management Chairmen</h3>
+                        <h5>Dr. Sanjida happy Blvd.</h5>
+                        <div>Dhaka Beach, FL  32114-3099</div>
+                        <div>Phone:  +3864812600 or +18004480228</div>
+                        <div> Fax: ++3864812601</div>
+                        <div>Email: Tourbdhappytravel@gmail.com</div>
+                    </Offcanvas.Body>
+                    <Offcanvas.Body>
+                        <h3>Tour Management Vais Chairman.</h3>
+                        <h5> Dr. Sabbir Hossen Blvd.</h5>
+                        <div> Dhaka Beach, Dhanmondi, FL  32114-3099</div>
+                        <div>Phone:  +86468812600 or +004123480228</div>
+                        <div>Fax: ++3864812601</div>
+                        <div>Email: Tourbdhappytravel@gmail.com</div>
+                    </Offcanvas.Body>
                 </Offcanvas.Body>
             </Offcanvas>
         </Container>

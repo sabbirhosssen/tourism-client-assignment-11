@@ -2,7 +2,11 @@ import React from 'react';
 import { Form, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+
+
+
 const Login = () => {
+
     return (
         <div className="w-25 border border-2 p-3 m-5 rounded mx-auto">
             <Form>
@@ -23,7 +27,8 @@ const Login = () => {
                 <br /> <br />
 
                 <Form.Text className="text-muted">
-                    Don't have an account yet? <Link as={Link} to={'/signup'} className="text-decoration-none ">Sign up here</Link>
+                    Don't have an account yet?
+                    <Link as={Link} to={'/signup'} className="text-decoration-none ">Sign up here</Link>
                 </Form.Text>
 
                 <Form.Label className="text-success fs-2">or</Form.Label>

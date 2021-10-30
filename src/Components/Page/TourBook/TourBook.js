@@ -18,16 +18,16 @@ const TourBook = () => {
     useEffect(() => {
 
         const findData = details?.find(detail => detail?.key == id)
-        setBookData(findData);
+        console.log(findData);
 
 
-    }, [details])
+    }, [])
     return (
 
         <div >
             <h2> This is dynamic page and id is:{id}</h2>
-            <p>Name: {bookData?.title}</p>
-            <p>price: {bookData?.body}</p>
+            {/* <p>Name: {bookData?.title}</p>
+            <p>price: {bookData?.body}</p> */}
         </div>
 
 

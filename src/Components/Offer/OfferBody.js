@@ -14,8 +14,8 @@ const OfferBody = () => {
 
     return (
         <div>
-            <div className="text-center text-danger pt-2 p-5">
-                <h1>Our Offer</h1>
+            <div className="text-center text-warning pt-5 p-5">
+                <h1>SPECIAL PACKAGES</h1>
             </div>
             <Row xs={1} md={3} className="g-4 p-4 shadow bg-body rounded mb-5">
                 {
