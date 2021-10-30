@@ -11,6 +11,7 @@ import Tour from './Components/Tour/Tour';
 import HotelBody from './Components/Hotel/HotelBody/HotelBody';
 import Signup from './Components/Signup/Signup';
 import TourBook from './Components/Page/TourBook/TourBook';
+import Test from './Components/Login/Test';
 // import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
         </Switch>
 
         <Footer></Footer>
+
       </Router>
 
 

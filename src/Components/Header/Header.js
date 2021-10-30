@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Container, Image, Nav, Navbar, Button, Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// import useAuth from '../../Hooks/useAuth';
+import useFirebase from '../../Hookes/useFirebase';
 import Icon from './Icon';
 
 
 
 const Header = () => {
-    // const { user, logOut } = useAuth();
+    const { user, logOut } = useFirebase('');
 
     //contact click
     const [show, setShow] = useState(false);
@@ -32,13 +32,23 @@ const Header = () => {
                             <Nav.Link as={Link} to={"/hotel"} className="px-3 fs-5 text-black" >
                                 <i className="fas fa-hotel"></i> HOTELS</Nav.Link>
                             <Nav.Link as={Link} to={"/offer"} className="px-3 fs-5 text-black" >OFFERS</Nav.Link>
-                            <Nav className=" fs-5 text-black " >
+                            <Nav className=" fs-5 pe-2 text-black " >
                                 <button className="border-0 bg-transparent" onClick={handleShow} > CONTACT</button>
                             </Nav>
                         </Nav>
+                        {user?.email ?
+                            <Button onClick={logOut} className="light text-danger fs-5 ms-3" >Logout</Button> :
+                            <Icon></Icon>
+                        }
 
-                        <Button variant="light" >Logout</Button> :
-                        <Icon></Icon>
+
+                        {user?.email ?
+                            <Image roundedCircle className="border-0 " width="60px" height="60px" src={user?.photoURL}></Image> :
+                            <Image roundedCircle className="border-0 d-none " width="60px" height="60px" src="#"></Image>
+
+                        }
+
+
 
 
 
