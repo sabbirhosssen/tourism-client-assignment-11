@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Col, Row, Button } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
 import { Link, useHistory } from 'react-router-dom';
 
 const TourCard = ({ tour }) => {
@@ -9,8 +8,8 @@ const TourCard = ({ tour }) => {
 
     // Book show handle
     const handleTourBook = (key) => {
-        const uri = `/tourBook/${key}`
-        history.push(uri)
+        const tour_uri = `/tourBook/${key}`
+        history.push(tour_uri)
     }
     return (
         <Col >

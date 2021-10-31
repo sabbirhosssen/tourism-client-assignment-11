@@ -2,10 +2,28 @@ import React from 'react';
 import { Form, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hookes/useAuth';
+import { useHistory, useLocation } from "react-router";
+
 
 
 const Signup = () => {
     const { logInUsingGoogle } = useAuth();
+    const history = useHistory();
+    const location = useLocation();
+
+    const signUp_uri = location.state?.from || '/home'
+
+    const handleGoogleSignUp = () => {
+        logInUsingGoogle()
+            .then(result => {
+
+                history.push(signUp_uri)
+            })
+
+    }
+
+
+
     return (
         <div className="w-25 border border-2 p-3 m-5 rounded mx-auto">
             <Form>
@@ -14,10 +32,11 @@ const Signup = () => {
 
                 <Form.Group className="mb-3 w-100">
 
-                    <Button onClick={logInUsingGoogle} variant="info w-100  fs-5"  >
+                    <Button onClick={handleGoogleSignUp} variant="info w-100  fs-5"  >
                         <Image width="35px" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" />
                         Sign in with Google
                     </Button>
+
 
                 </Form.Group>
                 <Form.Label className="text-success fs-2">or</Form.Label>

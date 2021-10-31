@@ -1,9 +1,16 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const OfferCard = ({ offer }) => {
-    const { img, title, body } = offer;
+    const { id, img, title, body } = offer;
+    const history = useHistory();
+
+    const handleOfferBook = () => {
+        const offer_uri = `/offerBook/${id}`
+        history.push(offer_uri)
+
+    }
     return (
 
 
@@ -16,8 +23,8 @@ const OfferCard = ({ offer }) => {
                         {body}
                     </Card.Text>
                     <Card.Title>
-                        <Link as={Link} to={'./login'}>
-                            <Button className="text-center bg-info"> READ MORE</Button>
+                        <Link as={Link} to={`/offerBook/${id}`}>
+                            <Button onClick={() => handleOfferBook(id)} className="text-center bg-info"> READ MORE</Button>
                         </Link>
                     </Card.Title>
                 </Card.Body>

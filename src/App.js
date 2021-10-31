@@ -13,6 +13,7 @@ import Signup from './Components/Signup/Signup';
 import TourBook from './Components/Page/TourBook/TourBook';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import OfferBook from './Components/Page/OfferBook/OfferBook';
 
 
 
@@ -48,7 +49,9 @@ function App() {
             <PrivateRoute path="/tourBook/:tourId">
               <TourBook></TourBook>
             </PrivateRoute>
-
+            <PrivateRoute path="/offerBook/:offerId">
+              <OfferBook></OfferBook>
+            </PrivateRoute>
 
             <Route exact path="*">
               <NotFound></NotFound>
