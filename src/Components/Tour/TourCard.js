@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Col, Row, Button } from 'react-bootstrap';
 // import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const TourCard = ({ tour }) => {
     const { key, img, title, body } = tour;
@@ -17,8 +17,8 @@ const TourCard = ({ tour }) => {
 
             <Card>
                 <Row className="bg-info rounded ">
-                    <Col md={6} className="ps-0">
-                        <Card.Img src={img} variant="top rounded mx-0" align="start" height="195px" />
+                    <Col md={6} className="p-0">
+                        <Card.Img src={img} variant="top rounded mx-0" align="start" height="100%" />
                     </Col>
                     <Col md={6} >
                         <Card.Body>
@@ -38,8 +38,10 @@ const TourCard = ({ tour }) => {
                             </Card.Text>
                             <Card.Title>
 
-                                <Button className="text-center bg-primary"
-                                    onClick={() => handleTourBook(key)}> Book Now</Button>
+                                <Link as={Link} to={`/tourBook/${key}`}>
+                                    <Button className="text-center bg-primary"
+                                        onClick={() => handleTourBook(key)}> Book Now</Button>
+                                </Link>
 
                             </Card.Title>
                         </Card.Body>

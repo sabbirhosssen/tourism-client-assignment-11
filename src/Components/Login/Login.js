@@ -1,21 +1,25 @@
 import React from 'react';
 import { Form, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hookes/useFirebase';
-
-
-
-
-
-
-
-
-
+import useAuth from '../../Hookes/useAuth';
+import { useHistory, useLocation } from "react-router";
 
 
 const Login = () => {
 
-    const { logInUsingGoogle } = useFirebase();
+    const { logInUsingGoogle } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home'
+
+
+    const handleGoogleLogIn = () => {
+        logInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri)
+            })
+
+    }
     return (
         <div className="w-25 border border-2 p-3 m-5 rounded mx-auto">
             <Form>
@@ -42,7 +46,7 @@ const Login = () => {
                 <br />
                 <Form.Label className="text-success fs-2">or</Form.Label>
 
-                <Button onClick={logInUsingGoogle} className="bg-info border-0 rounded w-100  fs-5" >
+                <Button onClick={handleGoogleLogIn} className="bg-info border-0 rounded w-100  fs-5" >
                     <Image width="35px" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" />
                     Sign in with Google
                 </Button>

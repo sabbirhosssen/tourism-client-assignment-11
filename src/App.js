@@ -11,49 +11,53 @@ import Tour from './Components/Tour/Tour';
 import HotelBody from './Components/Hotel/HotelBody/HotelBody';
 import Signup from './Components/Signup/Signup';
 import TourBook from './Components/Page/TourBook/TourBook';
-import Test from './Components/Login/Test';
-// import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/tour">
-            <Tour></Tour>
-          </Route>
-          <Route path="/hotel">
-            <HotelBody></HotelBody>
-          </Route>
-          <Route path="/offer">
-            <OfferBody></OfferBody>
-          </Route>
+    <div className="App m-0">
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/tour">
+              <Tour></Tour>
+            </Route>
+            <Route path="/hotel">
+              <HotelBody></HotelBody>
+            </Route>
+            <Route path="/offer">
+              <OfferBody></OfferBody>
+            </Route>
 
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/signup">
-            <Signup></Signup>
-          </Route>
-          <Route path="/tourBook/:id">
-            <TourBook></TourBook>
-          </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/signup">
+              <Signup></Signup>
+            </Route>
+            <PrivateRoute path="/tourBook/:tourId">
+              <TourBook></TourBook>
+            </PrivateRoute>
 
-          <Route exact path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
 
-        <Footer></Footer>
+            <Route exact path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
 
-      </Router>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
 
 
     </div>

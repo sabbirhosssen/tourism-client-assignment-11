@@ -1,8 +1,11 @@
 import React from 'react';
 import { Form, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hookes/useAuth';
+
 
 const Signup = () => {
+    const { logInUsingGoogle } = useAuth();
     return (
         <div className="w-25 border border-2 p-3 m-5 rounded mx-auto">
             <Form>
@@ -11,7 +14,7 @@ const Signup = () => {
 
                 <Form.Group className="mb-3 w-100">
 
-                    <Button variant="info w-100  fs-5" type="submit" >
+                    <Button onClick={logInUsingGoogle} variant="info w-100  fs-5"  >
                         <Image width="35px" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" />
                         Sign in with Google
                     </Button>

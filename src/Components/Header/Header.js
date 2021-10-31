@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
 import { Container, Image, Nav, Navbar, Button, Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hookes/useFirebase';
+import useAuth from '../../Hookes/useAuth';
+
 import Icon from './Icon';
 
 
 
 const Header = () => {
-    const { user, logOut } = useFirebase('');
+    const { user, logOut } = useAuth();
 
     //contact click
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    // console.log(user);
+
 
     return (
 
         <Container fluid>
 
-            <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
+            <Navbar collapseOnSelect expand="lg" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to={"/home"} className="fs-2 fw-bolder text-primary"> <Image src="https://tour.com.bd/uploads/global/logo.png" rounded="true" width="150px"></Image></Navbar.Brand>
 
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-info" />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav>
                             <Nav.Link as={Link} to={"/home"} className="px-3 fs-5 text-black" ><i className="fas fa-home"></i> Home</Nav.Link>

@@ -13,14 +13,14 @@ const HotelBody = () => {
 
     return (
         <div>
-            <div className="text-center pt-3 m-3">
+            <div className="text-center pt-3 m-0 ">
 
                 <span className="text-info"><i className="far fa-building fs-2 d-inline"></i>
                 </span><h1 className="d-inline ps-3">FEATURED HOTELS
                 </h1>
             </div>
 
-            <Row xs={1} md={3} className="g-4 p-5 shadow bg-body rounded mb-5">
+            <Row xs={1} md={3} className="g-4 p-5   m-0">
                 {
                     hotel.map(hotel =>
                         <HotelCard

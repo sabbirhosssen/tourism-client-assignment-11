@@ -7,15 +7,17 @@ import Dubais from './Dubais';
 const Home = () => {
     return (
         <div>
-            <Bannar></Bannar>
 
+            <Bannar></Bannar>
+            <br />
             <Tour></Tour>
             <br /><br />
             <HotelBody></HotelBody>
             {/* <br />
             <OfferBody></OfferBody> */}
-            <br /><br />
+            <br /><br /><br />
             <Dubais></Dubais>
+
         </div>
     );
 };

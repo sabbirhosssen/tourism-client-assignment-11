@@ -21,7 +21,7 @@ const Tour = () => {
                 </div>
 
             </div>
-            <Row xs={1} md={2} className="g-5 p-5">
+            <Row xs={1} md={2} className="g-5 p-5 m-0">
                 {
                     tour.map(tour =>
                         <TourCard
