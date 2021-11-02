@@ -10,7 +10,7 @@ const OfferBook = () => {
     const [offer, setOffer] = useState([])
     const { offerId } = useParams()
     useEffect(() =>
-        fetch('http://localhost:5000/offers')
+        fetch('https://secure-fjord-39220.herokuapp.com/offers')
             .then(res => res.json())
             .then(data => {
                 const findOffer = data.find(f => f._id == offerId)

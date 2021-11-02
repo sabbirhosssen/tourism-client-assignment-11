@@ -12,7 +12,7 @@ const TourBook = () => {
 
 
     useEffect(() =>
-        fetch("http://localhost:5000/tour")
+        fetch("https://secure-fjord-39220.herokuapp.com/tour")
             .then(res => res.json())
             .then(data => {
                 const findData = data.find(b => b._id == tourId)

@@ -6,7 +6,7 @@ const ClientOrder = () => {
     const [client, setClientOrder] = useState();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allOrder?email=${user.email}`)
+        fetch(`https://secure-fjord-39220.herokuapp.com/allOrder?email=${user.email}`)
             .then(res => res.json())
             .then(data => setClientOrder(data))
     }, [])
@@ -16,8 +16,10 @@ const ClientOrder = () => {
 
             <div className="w-75 border border-dark mx-auto p-5 my-5">
 
-                <h1>You have placed : {client.length} Orders</h1>
-
+                {/* <h1>You have placed : {client.length} Orders</h1>
+                //length kaj korse na 
+                */}
+                <h1>You have placed : Your all Orders</h1>
 
                 {client?.map(client =>
 

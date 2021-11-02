@@ -7,7 +7,7 @@ import OfferCard from './OfferCard';
 const OfferBody = () => {
     const [offer, setOffer] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/offers')
+        fetch('https://secure-fjord-39220.herokuapp.com/offers')
             .then(res => res.json())
             .then(data => setOffer(data))
     }, []);

@@ -7,7 +7,7 @@ import TourCard from './TourCard';
 const Tour = () => {
     const [tour, setTour] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/tour')
+        fetch('https://secure-fjord-39220.herokuapp.com/tour')
             .then(res => res.json())
             .then(data => setTour(data))
     }, []);

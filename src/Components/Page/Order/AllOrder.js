@@ -15,7 +15,7 @@ const AllOrder = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post(`http://localhost:5000/allOrder `, data)
+        axios.post(`https://secure-fjord-39220.herokuapp.com/allOrder `, data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added to successfully ')
