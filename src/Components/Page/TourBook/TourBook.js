@@ -1,24 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { Accordion, Image } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Accordion, Image, Button } from 'react-bootstrap';
+import { useParams, useHistory, Link } from 'react-router-dom';
 
 
 const TourBook = () => {
 
+    const history = useHistory();
     const { tourId } = useParams()
     const [details, setDetails] = useState([])
 
 
 
     useEffect(() =>
-        fetch("/Tour.json")
+        fetch("http://localhost:5000/tour")
             .then(res => res.json())
             .then(data => {
-                const findData = data.find(b => b.key == tourId)
+                const findData = data.find(b => b._id == tourId)
                 setDetails(findData)
             }), [])
 
 
+    const handleClickAllOrder = () => {
+        const order_uri = `${details._id}`
+        history.push(order_uri)
+        console.log(order_uri);
+
+    }
 
     return (
 
@@ -29,6 +36,7 @@ const TourBook = () => {
                 <div className="text-start p-2">
                     <h3>Name : {details?.title}</h3>
                     <h4>Address : {details?.address}</h4>
+                    <h4>Tour budget : $ {details?.price} </h4>
                 </div>
             </div>
 
@@ -56,6 +64,14 @@ const TourBook = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
+
+            <div className="text center py-5">
+                <h1>Please Conform Book Now </h1>
+                <Link as={Link} to={`/allOrder/${details?._id}`}>
+                    <Button onClick={() => handleClickAllOrder(details?._id)}>BOOK NOW</Button>
+                </Link>
+
+            </div>
         </div>
 
 

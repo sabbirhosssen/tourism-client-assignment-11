@@ -3,11 +3,11 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 
 const OfferCard = ({ offer }) => {
-    const { id, img, title, body } = offer;
+    const { _id, img, title, body } = offer;
     const history = useHistory();
 
-    const handleOfferBook = () => {
-        const offer_uri = `/offerBook/${id}`
+    const handleOfferBook = (_id) => {
+        const offer_uri = `/offerBook/${_id}`
         history.push(offer_uri)
 
     }
@@ -23,8 +23,8 @@ const OfferCard = ({ offer }) => {
                         {body}
                     </Card.Text>
                     <Card.Title>
-                        <Link as={Link} to={`/offerBook/${id}`}>
-                            <Button onClick={() => handleOfferBook(id)} className="text-center bg-info"> READ MORE</Button>
+                        <Link as={Link} to={`/offerBook/${_id}`}>
+                            <Button onClick={() => handleOfferBook(_id)} className="text-center bg-info"> READ MORE</Button>
                         </Link>
                     </Card.Title>
                 </Card.Body>

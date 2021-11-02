@@ -3,12 +3,12 @@ import { Card, Col, Row, Button } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 
 const TourCard = ({ tour }) => {
-    const { key, img, title, body } = tour;
+    const { _id, img, title, body } = tour;
     const history = useHistory();
 
     // Book show handle
-    const handleTourBook = (key) => {
-        const tour_uri = `/tourBook/${key}`
+    const handleTourBook = (_id) => {
+        const tour_uri = `/tourBook/${_id}`
         history.push(tour_uri)
     }
     return (
@@ -37,9 +37,9 @@ const TourCard = ({ tour }) => {
                             </Card.Text>
                             <Card.Title>
 
-                                <Link as={Link} to={`/tourBook/${key}`}>
+                                <Link as={Link} to={`/tourBook/${_id}`}>
                                     <Button className="text-center bg-primary"
-                                        onClick={() => handleTourBook(key)}> Book Now</Button>
+                                        onClick={() => handleTourBook(_id)}> Book Now</Button>
                                 </Link>
 
                             </Card.Title>

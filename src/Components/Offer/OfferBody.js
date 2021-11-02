@@ -7,7 +7,7 @@ import OfferCard from './OfferCard';
 const OfferBody = () => {
     const [offer, setOffer] = useState([]);
     useEffect(() => {
-        fetch('./Offers.json')
+        fetch('http://localhost:5000/offers')
             .then(res => res.json())
             .then(data => setOffer(data))
     }, []);
@@ -21,7 +21,7 @@ const OfferBody = () => {
                 {
                     offer.map(offer =>
                         <OfferCard
-                            key={offer.id}
+                            key={offer._id}
                             offer={offer}
                         ></OfferCard>
                     )

@@ -14,6 +14,9 @@ import TourBook from './Components/Page/TourBook/TourBook';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import OfferBook from './Components/Page/OfferBook/OfferBook';
+import TourShiping from './Components/Page/TourShiping/TourShiping';
+import AllOrder from './Components/Page/Order/AllOrder';
+import ClientOrder from './Components/Page/ClientOrder/ClientOrder';
 
 
 
@@ -46,12 +49,23 @@ function App() {
             <Route path="/signup">
               <Signup></Signup>
             </Route>
+            <Route path="/tourShiping">
+              <TourShiping></TourShiping>
+            </Route>
+
             <PrivateRoute path="/tourBook/:tourId">
               <TourBook></TourBook>
+            </PrivateRoute>
+            <PrivateRoute path="/allOrder">
+              <AllOrder></AllOrder>
             </PrivateRoute>
             <PrivateRoute path="/offerBook/:offerId">
               <OfferBook></OfferBook>
             </PrivateRoute>
+            <PrivateRoute path="/clientOrder">
+              <ClientOrder></ClientOrder>
+            </PrivateRoute>
+
 
             <Route exact path="*">
               <NotFound></NotFound>

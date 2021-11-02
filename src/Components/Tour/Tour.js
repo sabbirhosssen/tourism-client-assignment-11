@@ -7,7 +7,7 @@ import TourCard from './TourCard';
 const Tour = () => {
     const [tour, setTour] = useState([])
     useEffect(() => {
-        fetch('./Tour.json')
+        fetch('http://localhost:5000/tour')
             .then(res => res.json())
             .then(data => setTour(data))
     }, []);
@@ -25,7 +25,7 @@ const Tour = () => {
                 {
                     tour.map(tour =>
                         <TourCard
-                            key={tour.key}
+                            key={tour._id}
                             tour={tour}
                         >
 
